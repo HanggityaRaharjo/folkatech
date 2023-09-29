@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Font Gotham Bold */
+@font-face {
+  font-family: "Gotham";
+  font-weight: bold;
+  src: url("/font/gotham/Gotham-Bold.otf") format("opentype");
+}
+
+/* Font Gotham Regular (Normal/Book) */
+@font-face {
+  font-family: "Gotham";
+  font-weight: normal;
+  src: url("/font/gotham/GothamBook.ttf") format("truetype");
+}
+
+/* Font Gotham Italic (Book Italic) */
+@font-face {
+  font-family: "Gotham";
+  font-style: italic;
+  src: url("/font/gotham/GothamBookItalic.ttf") format("truetype");
+}
+
+/* Font Gotham Light */
+@font-face {
+  font-family: "Gotham";
+  font-weight: lighter;
+  src: url("/font/gotham/GothamLight.ttf") format("truetype");
+}
+
+/* Font Gotham Light Italic */
+@font-face {
+  font-family: "Gotham";
+  font-weight: lighter;
+  font-style: italic;
+  src: url("/font/gotham/GothamLightItalic.ttf") format("truetype");
+}
+
+/* Font Gotham Medium */
+@font-face {
+  font-family: "Gotham";
+  font-weight: 500; /* atau "medium" jika mendukung */
+  src: url("/font/gotham/GothamMedium.ttf") format("truetype");
+}
+
+/* Font Gotham Medium Italic */
+
+/* Font Gotham Thin */
+@font-face {
+  font-family: "Gotham";
+  font-weight: 100; /* atau "thin" jika mendukung */
+  src: url("/font/gotham/Gotham-Thin.otf") format("opentype");
+}
+
+.fade-in-out {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in-out.fade-in {
+  opacity: 1;
+}
+
+.fade-in-out.fade-out {
+  opacity: 0;
+}
+
+.tab-move {
+  animation: tab-move 1s;
+}
+
+.tab-active-move {
+  animation: tab-active-move 1s;
+}
+
+@keyframes tab-move {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes tab-active-move {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+.horizontal-slider {
+  width: 100%;
+  max-width: 500px;
+  height: 50px;
+}
+.horizontal-slider .example-track {
+  top: 20px;
+  height: 6px;
+  background: #757575;
+
+  border-radius: 9px;
+}
+.example-track.example-track-1 {
+  background: #eb3f36;
+}
